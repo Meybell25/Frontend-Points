@@ -1,0 +1,137 @@
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #EEA236;
+}
+
+.content
+{
+    display: grid;
+    grid-template-columns: repeat(2,400px);
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Presentacion h1 {
+    font-size: 25px;
+}
+
+.Presentacion p
+{
+    text-align: justify;
+}
+
+.Imagen img 
+{
+    margin: 15px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Presentacion h1 {
+        font-size: 24px;
+    }
+
+    .Imagen img {
+        margin: 10px;
+    }
+}
+
+/*Esto seria del contenedor de los pasos a seguir*/
+.Content-Pasos
+{
+    text-align: center;
+}
+
+.titulo h1 
+{
+    text-align: center;
+}
+
+/*Serie de pasos a seguir*/
+.Content-Pasos .Pasos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Pasos {
+    position: relative;
+}
+
+@media (max-width: 850px) {
+    .Content-Pasos .Pasos li 
+    {
+        width: 95%;
+    }
+}
+
+.Pasos ol {
+    counter-reset: step-counter;
+    padding-left: 20px
+}
+.Pasos li {
+    counter-increment: step-counter;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-left: 5px solid #239b56;
+    position: relative;
+    list-style: none;
+    border-radius: 10px;
+    width: 800px;
+}
+.Pasos li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #239b56;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Estilo para la tabla*/
+.tbl-niveles-usuario {
+    padding: 20px;
+}
+.tbl-niveles-usuario table {
+    width: 80%;
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    left: 120px;
+}
+.tbl-niveles-usuario th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+.tbl-niveles-usuario th {
+    background-color: #239b56;
+    color: white;
+}
+
+.tbl-niveles-usuario th, .tbl-niveles-usuario td {
+    border: 1px solid #ccc;
+}
