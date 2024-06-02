@@ -1,5 +1,3 @@
-
-
 window.addEventListener("scroll", function(){
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY>0);
@@ -28,11 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
  // Función para actualizar la visibilidad del botón de toggle al cambiar el tamaño de la ventana
  function updateToggleVisibility() {
-  if (window.innerWidth <= 992) {
-      toggleBtn.style.display = 'block';
-  } else {
-      toggleBtn.style.display = 'none';
-  }
+    if (window.innerWidth <= 992) {
+        toggleBtn.style.display = 'block';
+        if (headerLinks.classList.contains('show')) {
+            closeBtn.style.display = 'block';
+        }
+    } else {
+        toggleBtn.style.display = 'none';
+        closeBtn.style.display = 'none';
+        headerLinks.classList.remove('show'); // Cierra el menú si la ventana es mayor a 992px
+    }
 }
 
 

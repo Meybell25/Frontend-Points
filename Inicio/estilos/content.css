@@ -135,3 +135,105 @@ body
 .tbl-niveles-usuario th, .tbl-niveles-usuario td {
     border: 1px solid #ccc;
 }
+
+@media (max-width: 550px){
+    .tbl-niveles-usuario{
+        position: relative;
+        right: 50px;
+    }
+}
+
+/*Carrucel*/
+.Promociones {
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+}
+
+.Promociones .titulo
+{
+    background-color: #239b56;
+    width: 80%;
+    position: relative;
+    left: 12%;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.Promociones .content-text
+{
+    position: relative;
+    left: 12%;
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.Imagen {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slider img {
+    width: 100%;
+    height: 50vh;
+    display: block;
+}
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.buttons button {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (max-width: 550px) {
+    .Promociones .titulo {
+        font-size: 13px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider img {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .Promociones .titulo {
+        font-size: 16px;
+        padding: 5px;
+        width: 90%;
+    }
+
+    .Promociones .content-text {
+        width: 90%;
+    }
+
+    .slider img {
+        height: 30vh;
+    }
+
+    .buttons button {
+        padding: 5px;
+    }
+}
